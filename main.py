@@ -17,7 +17,10 @@ load_dotenv()
 
 openai_key = os.getenv("OPENAI_API_KEY")
 
-chat = ChatOpenAI(api_key=openai_key, verbose=True)
+chat = ChatOpenAI(
+    api_key=openai_key,
+    verbose=True,
+)
 
 memory = ConversationSummaryMemory(
     # chat_memory=FileChatMessageHistory("message.json"),
